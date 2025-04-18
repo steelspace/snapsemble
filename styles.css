@@ -96,12 +96,27 @@ footer p {
 }
 
 .responsive-img {
-   width: 100%;
    height: auto;
+   max-width: 100%;
    max-width: 600px;
 }
 
+.responsive-img-phone {
+   max-height: 200px;
+   margin-left: -27rem;
+}
+
+.responsive-img-ipad {
+   max-height: 250px;
+   margin-left: 27rem;
+
+}
+
 .card {
+   position: sticky;
+   top: 0;
+   /* padding-top: calc(var(--index) * var(--card-top-offset)); */
+
    --index0: calc(var(--index) - 1);
    /* 0-based index */
    --reverse-index: calc(var(--numcards) - var(--index0));
@@ -129,4 +144,11 @@ footer p {
    animation: linear scale forwards;
    animation-timeline: --cards-element-scrolls-in-body;
    animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
+}
+
+/* Remove bullets from li elements */
+ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
 }
