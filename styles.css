@@ -102,7 +102,7 @@ footer p {
 
 .responsive-img-phone {
    max-height: 200px;
-   top: 100px;
+   top: -100px;
 }
 
 .responsive-img-ipad {
@@ -149,10 +149,12 @@ footer p {
 #cards {
    --numcards: 4;
    view-timeline-name: --cards-element-scrolls-in-body;
+   position: relative;
+   display: block;
 }
 
 .card__content {
-   position: fixed;
+   position: relative;
    --start-range: calc(var(--index0) / var(--numcards) * 100%);
    --end-range: calc((var(--index)) / var(--numcards) * 100%);
 
@@ -166,4 +168,5 @@ ul {
    list-style-type: none;
    padding: 0;
    margin: 0;
+   background-color: red;
 }
