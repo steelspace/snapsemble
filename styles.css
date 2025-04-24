@@ -103,13 +103,13 @@ footer p {
 .responsive-img-phone {
    max-height: 200px;
    margin-top: -45rem;
-   margin-left: -22rem;
+   margin-left: 26rem;
 }
 
 .responsive-img-ipad {
-   max-height: 250px;
-   margin-left: 15rem;
-   margin-top: -80rem;
+   max-height: 220px;
+   margin-left: -15rem;
+   margin-top: -20rem;
 }
 
 .card {
