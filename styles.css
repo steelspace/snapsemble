@@ -16,19 +16,27 @@ body {
 }
 
 header {
-   padding: 60px 20px;
+   margin-top: 1em;
    text-align: center;
 }
 
 header h1 {
    font-size: 3em;
    margin: 0;
-   font-weight: 700;
+}
+
+p {
+   margin: 0;
 }
 
 header p {
-   font-size: 1.2em;
-   margin-top: 10px;
+   color: white;
+   background-color: #eb7543; /* Orange background */
+   border-radius: 0.95em; /* Adjust for desired roundness */
+   border: 1px solid #c06037; /* Dark thin stroke */
+   padding: 1em; /* Padding */
+   margin: 1em auto; /* Keep existing vertical margin, center horizontally */
+   display: inline-block; /* Ensure background and border wrap the content */
 }
 
 main {
@@ -38,7 +46,6 @@ main {
 
 main h2 {
    font-size: 2.5em;
-   margin-bottom: 20px;
    color: #eb7543;
 }
 
@@ -47,7 +54,6 @@ main h2 {
    flex-wrap: wrap;
    justify-content: center;
    gap: 30px;
-   margin-top: 30px;
 }
 
 .feature {
