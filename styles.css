@@ -14,8 +14,7 @@ body {
 }
 
 header {
-   background: linear-gradient(135deg, #6200ea, #3700b3);
-   color: white;
+   background: linear-gradient(135deg, #fbfafb, #e1e1e1);
    padding: 60px 20px;
    text-align: center;
 }
@@ -51,35 +50,18 @@ main h2 {
 }
 
 .feature {
-   background: white;
-   border-radius: 12px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   padding: 20px;
-   width: 300px;
    text-align: center;
    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature:hover {
    transform: translateY(-10px);
-   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.feature img {
-   width: 80px;
-   height: 80px;
-   margin-bottom: 15px;
 }
 
 .feature h3 {
    font-size: 1.5em;
    margin-bottom: 10px;
    color: #3700b3;
-}
-
-.feature p {
-   font-size: 1em;
-   color: #555;
 }
 
 footer {
@@ -183,4 +165,8 @@ ul {
 .logo-icon {
    width: 3rem; /* Adjust the size of the logo */
    height: 3rem;
+}
+
+.shadowed-image {
+  filter: drop-shadow(0 5px 6px rgba(0, 0, 0, 0.2)); /* Adjust values as needed */
 }

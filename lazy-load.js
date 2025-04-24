@@ -6,16 +6,36 @@ document.addEventListener("DOMContentLoaded", () => {
          if (entry.isIntersecting) {
             const img = entry.target;
             const lowResSrc = img.getAttribute("src");
-            const highResSrc = lowResSrc.replace(".webp", ".png");
+            const highResPngSrc = lowResSrc.replace(".webp", ".png");
+            const highResJpegSrc = lowResSrc.replace(".webp", ".jpeg"); // Or .jpg if you use that
 
-            const highResImage = new Image();
-            highResImage.src = highResSrc;
+            const pngImage = new Image();
+            pngImage.src = highResPngSrc;
 
-            highResImage.onload = () => {
-               img.src = highResImage.src;
+            pngImage.onload = () => {
+               // PNG loaded successfully
+               img.src = highResPngSrc;
+               observer.unobserve(img); // Stop observing
             };
 
-            observer.unobserve(img); // Stop observing once the image is loaded
+            pngImage.onerror = () => {
+               // PNG failed to load, try JPEG
+               console.warn(`Failed to load PNG: ${highResPngSrc}. Trying JPEG...`);
+               const jpegImage = new Image();
+               jpegImage.src = highResJpegSrc;
+
+               jpegImage.onload = () => {
+                  // JPEG loaded successfully
+                  img.src = highResJpegSrc;
+                  observer.unobserve(img); // Stop observing
+               };
+
+               jpegImage.onerror = () => {
+                  // Both PNG and JPEG failed
+                  console.error(`Failed to load both PNG and JPEG for: ${lowResSrc}`);
+                  observer.unobserve(img); // Stop observing anyway
+               };
+            };
          }
       });
    });
