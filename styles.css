@@ -1,7 +1,6 @@
 body {
-   /* Replace 'Roboto Slab' with the new font name (Example: Lato) */
    font-family: 'Lato', sans-serif;
-   margin: 0;
+   margin: 1em;
    padding: 0;
    background-color: #f9f9f9;
    color: #333;
@@ -31,12 +30,12 @@ p {
 
 header p {
    color: white;
-   background-color: #eb7543; /* Orange background */
-   border-radius: 0.95em; /* Adjust for desired roundness */
-   border: 1px solid #c06037; /* Dark thin stroke */
-   padding: 1em; /* Padding */
-   margin: 1em auto; /* Keep existing vertical margin, center horizontally */
-   display: inline-block; /* Ensure background and border wrap the content */
+   background-color: #FF9775;
+   border-radius: 0.95em;
+   border: 1px solid #FF9775;
+   padding: 1em;
+   margin: 1em auto;
+   display: inline-block;
 }
 
 main {
@@ -46,7 +45,7 @@ main {
 
 main h2 {
    font-size: 2.5em;
-   color: #eb7543;
+   color: #FF9775;
 }
 
 .features {
@@ -72,7 +71,7 @@ main h2 {
 }
 
 footer {
-   background: #3700b3;
+   background: #2ebd82;
    color: white;
    text-align: center;
    padding: 20px 0;
@@ -87,93 +86,31 @@ footer p {
 .responsive-img {
    height: auto;
    max-width: 600px;
+   width: 100%;
 }
 
-.responsive-img-phone {
-   max-height: 200px;
-   margin-top: -45rem;
-   margin-left: 26rem;
+.responsive-img-mac {
+   max-height: 15rem;
 }
 
-.responsive-img-ipad {
-   max-height: 220px;
-   margin-left: -15rem;
-   margin-top: -20rem;
-}
-
-.card {
-   opacity: 0; /* Initially hidden */
-   transform: translateY(50px); /* Start slightly below */
-   animation: fadeInUp 0.6s ease forwards; /* Trigger animation */
-}
-
-.card:nth-child(1) {
-   animation-delay: 0.2s; /* Delay for the first card */
-}
-
-.card:nth-child(2) {
-   animation-delay: 0.4s; /* Delay for the second card */
-}
-
-.card:nth-child(3) {
-   animation-delay: 0.6s; /* Delay for the third card */
-}
-
-@keyframes scale {
-   to {
-      transform:
-         scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
-   }
-}
-
-@keyframes fadeInUp {
-   0% {
-      opacity: 0;
-      transform: translateY(50px);
-   }
-   100% {
-      opacity: 1;
-      transform: translateY(0);
-   }
-}
-
-#cards {
-   --numcards: 4;
-   view-timeline-name: --cards-element-scrolls-in-body;
-   position: relative;
-   display: block;
-}
-
-.card__content {
-   position: relative;
-   --start-range: calc(var(--index0) / var(--numcards) * 100%);
-   --end-range: calc((var(--index)) / var(--numcards) * 100%);
-
-   animation: linear scale forwards;
-   animation-timeline: --cards-element-scrolls-in-body;
-   animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
-}
-
-/* Remove bullets from li elements */
 ul {
    list-style-type: none;
    padding: 0;
    margin: 0;
 }
 
-/* Style for the logo and title */
 .logo-title {
    display: flex;
    align-items: center;
    justify-content: center;
-   gap: 1rem; /* Space between the logo and the title */
+   gap: 1rem;
 }
 
 .logo-icon {
-   width: 3rem; /* Adjust the size of the logo */
+   width: 3rem;
    height: 3rem;
 }
 
 .shadowed-image {
-  filter: drop-shadow(0 5px 6px rgba(0, 0, 0, 0.2)); /* Adjust values as needed */
+  filter: drop-shadow(0 5px 6px rgba(0, 0, 0, 0.2));
 }
